@@ -1,0 +1,203 @@
+
+
+================================================================
+== Vivado HLS Report for 'load_weight'
+================================================================
+* Date:           Tue Mar 19 14:53:42 2024
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        test_conv
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg400-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 8.750 ns |   1.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+------+------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+    |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+    +---------+---------+-----------+-----------+------+------+---------+
+    |     2362|     2362| 23.620 us | 23.620 us |  2362|  2362|   none  |
+    +---------+---------+-----------+-----------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                                 |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |            Loop Name            |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +---------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- memcpy.wt_buff.V.gep.weight.V  |     2353|     2353|         3|          1|          1|  2352|    yes   |
+        +---------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  | URAM|
++-----------------+---------+-------+--------+-------+-----+
+|DSP              |        -|      1|       -|      -|    -|
+|Expression       |        -|      -|       0|     23|    -|
+|FIFO             |        -|      -|       -|      -|    -|
+|Instance         |        -|      -|       -|      -|    -|
+|Memory           |        -|      -|       -|      -|    -|
+|Multiplexer      |        -|      -|       -|     24|    -|
+|Register         |        -|      -|      99|      -|    -|
++-----------------+---------+-------+--------+-------+-----+
+|Total            |        0|      1|      99|     47|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Available        |      280|    220|  106400|  53200|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Utilization (%)  |        0|   ~0  |   ~0   |   ~0  |    0|
++-----------------+---------+-------+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    +--------------------------+----------------------+--------------+
+    |         Instance         |        Module        |  Expression  |
+    +--------------------------+----------------------+--------------+
+    |conv_mac_muladd_7cud_U14  |conv_mac_muladd_7cud  | i0 + i1 * i2 |
+    +--------------------------+----------------------+--------------+
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------------------------+----------+-------+---+----+------------+------------+
+    |           Variable Name           | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------------------------+----------+-------+---+----+------------+------------+
+    |add_ln49_fu_136_p2                 |     +    |      0|  0|  12|          12|           1|
+    |ap_block_pp0_stage0_11001          |    and   |      0|  0|   1|           1|           1|
+    |ap_block_state10_pp0_stage0_iter1  |    and   |      0|  0|   1|           1|           1|
+    |icmp_ln49_fu_130_p2                |   icmp   |      0|  0|   5|          12|          12|
+    |ap_enable_pp0                      |    xor   |      0|  0|   2|           1|           2|
+    |ap_enable_reg_pp0_iter1            |    xor   |      0|  0|   2|           2|           1|
+    +-----------------------------------+----------+-------+---+----+------------+------------+
+    |Total                              |          |      0|  0|  23|          29|          18|
+    +-----------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------------------+----+-----------+-----+-----------+
+    |                Name               | LUT| Input Size| Bits| Total Bits|
+    +-----------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                          |   6|         11|    1|         11|
+    |ap_enable_reg_pp0_iter1            |   3|          2|    1|          2|
+    |ap_enable_reg_pp0_iter2            |   3|          2|    1|          2|
+    |ap_phi_mux_phi_ln49_phi_fu_105_p4  |   3|          2|   12|         24|
+    |phi_ln49_reg_101                   |   3|          2|   12|         24|
+    |weight_V_blk_n_AR                  |   3|          2|    1|          2|
+    |weight_V_blk_n_R                   |   3|          2|    1|          2|
+    +-----------------------------------+----+-----------+-----+-----------+
+    |Total                              |  24|         23|   29|         67|
+    +-----------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------------------+----+----+-----+-----------+
+    |               Name              | FF | LUT| Bits| Const Bits|
+    +---------------------------------+----+----+-----+-----------+
+    |add_ln49_reg_166                 |  12|   0|   12|          0|
+    |ap_CS_fsm                        |  10|   0|   10|          0|
+    |ap_enable_reg_pp0_iter0          |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1          |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2          |   1|   0|    1|          0|
+    |icmp_ln49_reg_162                |   1|   0|    1|          0|
+    |icmp_ln49_reg_162_pp0_iter1_reg  |   1|   0|    1|          0|
+    |phi_ln49_reg_101                 |  12|   0|   12|          0|
+    |phi_ln49_reg_101_pp0_iter1_reg   |  12|   0|   12|          0|
+    |weight_V_addr_read_reg_171       |  16|   0|   16|          0|
+    |weight_V_addr_reg_156            |  32|   0|   32|          0|
+    +---------------------------------+----+----+-----+-----------+
+    |Total                            |  99|   0|   99|          0|
+    +---------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------+-----+-----+------------+-----------------+--------------+
+|        RTL Ports        | Dir | Bits|  Protocol  |  Source Object  |    C Type    |
++-------------------------+-----+-----+------------+-----------------+--------------+
+|ap_clk                   |  in |    1| ap_ctrl_hs |   load_weight   | return value |
+|ap_rst                   |  in |    1| ap_ctrl_hs |   load_weight   | return value |
+|ap_start                 |  in |    1| ap_ctrl_hs |   load_weight   | return value |
+|ap_done                  | out |    1| ap_ctrl_hs |   load_weight   | return value |
+|ap_idle                  | out |    1| ap_ctrl_hs |   load_weight   | return value |
+|ap_ready                 | out |    1| ap_ctrl_hs |   load_weight   | return value |
+|m_axi_weight_V_AWVALID   | out |    1|    m_axi   |     weight_V    |    pointer   |
+|m_axi_weight_V_AWREADY   |  in |    1|    m_axi   |     weight_V    |    pointer   |
+|m_axi_weight_V_AWADDR    | out |   32|    m_axi   |     weight_V    |    pointer   |
+|m_axi_weight_V_AWID      | out |    1|    m_axi   |     weight_V    |    pointer   |
+|m_axi_weight_V_AWLEN     | out |   32|    m_axi   |     weight_V    |    pointer   |
+|m_axi_weight_V_AWSIZE    | out |    3|    m_axi   |     weight_V    |    pointer   |
+|m_axi_weight_V_AWBURST   | out |    2|    m_axi   |     weight_V    |    pointer   |
+|m_axi_weight_V_AWLOCK    | out |    2|    m_axi   |     weight_V    |    pointer   |
+|m_axi_weight_V_AWCACHE   | out |    4|    m_axi   |     weight_V    |    pointer   |
+|m_axi_weight_V_AWPROT    | out |    3|    m_axi   |     weight_V    |    pointer   |
+|m_axi_weight_V_AWQOS     | out |    4|    m_axi   |     weight_V    |    pointer   |
+|m_axi_weight_V_AWREGION  | out |    4|    m_axi   |     weight_V    |    pointer   |
+|m_axi_weight_V_AWUSER    | out |    1|    m_axi   |     weight_V    |    pointer   |
+|m_axi_weight_V_WVALID    | out |    1|    m_axi   |     weight_V    |    pointer   |
+|m_axi_weight_V_WREADY    |  in |    1|    m_axi   |     weight_V    |    pointer   |
+|m_axi_weight_V_WDATA     | out |   16|    m_axi   |     weight_V    |    pointer   |
+|m_axi_weight_V_WSTRB     | out |    2|    m_axi   |     weight_V    |    pointer   |
+|m_axi_weight_V_WLAST     | out |    1|    m_axi   |     weight_V    |    pointer   |
+|m_axi_weight_V_WID       | out |    1|    m_axi   |     weight_V    |    pointer   |
+|m_axi_weight_V_WUSER     | out |    1|    m_axi   |     weight_V    |    pointer   |
+|m_axi_weight_V_ARVALID   | out |    1|    m_axi   |     weight_V    |    pointer   |
+|m_axi_weight_V_ARREADY   |  in |    1|    m_axi   |     weight_V    |    pointer   |
+|m_axi_weight_V_ARADDR    | out |   32|    m_axi   |     weight_V    |    pointer   |
+|m_axi_weight_V_ARID      | out |    1|    m_axi   |     weight_V    |    pointer   |
+|m_axi_weight_V_ARLEN     | out |   32|    m_axi   |     weight_V    |    pointer   |
+|m_axi_weight_V_ARSIZE    | out |    3|    m_axi   |     weight_V    |    pointer   |
+|m_axi_weight_V_ARBURST   | out |    2|    m_axi   |     weight_V    |    pointer   |
+|m_axi_weight_V_ARLOCK    | out |    2|    m_axi   |     weight_V    |    pointer   |
+|m_axi_weight_V_ARCACHE   | out |    4|    m_axi   |     weight_V    |    pointer   |
+|m_axi_weight_V_ARPROT    | out |    3|    m_axi   |     weight_V    |    pointer   |
+|m_axi_weight_V_ARQOS     | out |    4|    m_axi   |     weight_V    |    pointer   |
+|m_axi_weight_V_ARREGION  | out |    4|    m_axi   |     weight_V    |    pointer   |
+|m_axi_weight_V_ARUSER    | out |    1|    m_axi   |     weight_V    |    pointer   |
+|m_axi_weight_V_RVALID    |  in |    1|    m_axi   |     weight_V    |    pointer   |
+|m_axi_weight_V_RREADY    | out |    1|    m_axi   |     weight_V    |    pointer   |
+|m_axi_weight_V_RDATA     |  in |   16|    m_axi   |     weight_V    |    pointer   |
+|m_axi_weight_V_RLAST     |  in |    1|    m_axi   |     weight_V    |    pointer   |
+|m_axi_weight_V_RID       |  in |    1|    m_axi   |     weight_V    |    pointer   |
+|m_axi_weight_V_RUSER     |  in |    1|    m_axi   |     weight_V    |    pointer   |
+|m_axi_weight_V_RRESP     |  in |    2|    m_axi   |     weight_V    |    pointer   |
+|m_axi_weight_V_BVALID    |  in |    1|    m_axi   |     weight_V    |    pointer   |
+|m_axi_weight_V_BREADY    | out |    1|    m_axi   |     weight_V    |    pointer   |
+|m_axi_weight_V_BRESP     |  in |    2|    m_axi   |     weight_V    |    pointer   |
+|m_axi_weight_V_BID       |  in |    1|    m_axi   |     weight_V    |    pointer   |
+|m_axi_weight_V_BUSER     |  in |    1|    m_axi   |     weight_V    |    pointer   |
+|weight_V_offset          |  in |   31|   ap_none  | weight_V_offset |    scalar    |
+|wt_buff_V_address0       | out |   12|  ap_memory |    wt_buff_V    |     array    |
+|wt_buff_V_ce0            | out |    1|  ap_memory |    wt_buff_V    |     array    |
+|wt_buff_V_we0            | out |    1|  ap_memory |    wt_buff_V    |     array    |
+|wt_buff_V_d0             | out |   16|  ap_memory |    wt_buff_V    |     array    |
+|m                        |  in |    7|   ap_none  |        m        |    scalar    |
++-------------------------+-----+-----+------------+-----------------+--------------+
+

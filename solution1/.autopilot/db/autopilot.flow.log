@@ -1,0 +1,1038 @@
+INFO-FLOW: Workspace D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1 opened at Tue Mar 19 14:53:09 +0800 2024
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib E:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq 
+Execute       source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.lib 
+Execute         source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.lib 
+Execute           source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.lib 
+Execute           source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.lib 
+Execute           source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.lib 
+Execute           source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.lib 
+Execute         source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.lib 
+Execute         source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.lib 
+Execute         source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.lib 
+Execute       source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute       source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq.gen 
+Execute       source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.gen 
+Execute         source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.gen 
+Execute         source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
+Execute         source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
+Execute     open_platform DefaultPlatform 
+Execute     import_lib E:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6 
+Execute       source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.lib 
+Execute       source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute         source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+Execute     set_part xc7z020-clg400-2 
+Execute       ap_part_info -name xc7z020-clg400-2 -data single -quiet 
+Command       ap_part_info done; 0.796 sec.
+Execute       ap_part_info -name xc7z020-clg400-2 -data info 
+Execute       add_library xilinx/zynq/zynq:xc7z020:-clg400:-2 
+Execute         get_default_platform 
+Execute         ap_part_info -data single -name xc7z020-clg400-2 
+Execute         ap_part_info -name xc7z020-clg400-2 -data resources 
+Execute         ap_part_info -name xc7z020-clg400-2 -data info 
+Execute         ap_part_info -name xc7z020-clg400-2 -data info 
+Execute         config_chip_info -quiet -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP48E 220} {BRAM 280} {URAM 0} 
+Execute         ap_part_info -name xc7z020-clg400-2 -data info 
+Execute         config_chip_info -quiet -speed medium 
+Execute       add_library xilinx/zynq/zynq_fpv6 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib E:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6 
+Execute           source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.lib 
+Execute           source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute             source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute               source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute               source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute         source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute           source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-2'
+Execute       ap_part_info -name xc7z020-clg400-2 -data info 
+Execute       get_default_platform 
+Command     set_part done; 0.938 sec.
+Execute     ap_part_info -data single -name xc7z020-clg400-2 
+Execute     ap_part_info -name xc7z020-clg400-2 -data resources 
+Execute     ap_part_info -name xc7z020-clg400-2 -data info 
+Execute     ap_part_info -name xc7z020-clg400-2 -data info 
+Execute     config_chip_info -quiet -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP48E 220} {BRAM 280} {URAM 0} 
+Execute     ap_part_info -name xc7z020-clg400-2 -data info 
+Execute     config_chip_info -quiet -speed medium 
+Command   open_solution done; 1.128 sec.
+Execute   set_part xc7z020clg400-2 
+Execute     ap_part_info -name xc7z020clg400-2 -data single -quiet 
+Execute     ap_part_info -name xc7z020clg400-2 -data info 
+Execute     add_library xilinx/zynq/zynq:xc7z020:-clg400:-2 
+Execute       get_default_platform 
+Execute       ap_part_info -data single -name xc7z020-clg400-2 
+Execute       ap_part_info -name xc7z020-clg400-2 -data resources 
+Execute       ap_part_info -name xc7z020-clg400-2 -data info 
+Execute       ap_part_info -name xc7z020-clg400-2 -data info 
+Execute       config_chip_info -quiet -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP48E 220} {BRAM 280} {URAM 0} 
+Execute       ap_part_info -name xc7z020-clg400-2 -data info 
+Execute       config_chip_info -quiet -speed medium 
+Execute     add_library xilinx/zynq/zynq_fpv6 
+Execute       get_default_platform 
+Execute       open_platform DefaultPlatform 
+Execute       import_lib E:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6 
+Execute         source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.lib 
+Execute         source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute           source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute             source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute             source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute               source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute         source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+Execute     ap_part_info -name xc7z020-clg400-2 -data info 
+Execute     get_default_platform 
+Command   set_part done; 0.137 sec.
+Execute   create_clock -period 10 -name default 
+Execute   csynth_design 
+Execute     get_config_compile -dump_cfg 
+Execute     get_config_compile -effort 
+Execute     get_config_compile -enable_clang39 
+Execute     get_config_compile -g 
+Execute     get_config_compile -ng 
+Execute     get_config_compile -opt_fp 
+Execute     get_config_compile -skip_cdt 
+Execute     get_config_compile -skip_syncheck 
+Execute     get_config_compile -skip_transform 
+Execute     get_config_compile -keep_printf 
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+Execute       get_config_schedule -relax_ii_for_timing 
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+Execute       get_config_schedule -suppress_dependence_error_break 
+INFO: [HLS 200-10] Analyzing design file 'test_conv/src/test.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling test_conv/src/test.cpp as C++
+Execute       ap_part_info -name xc7z020-clg400-2 -data info 
+Execute       is_encrypted test_conv/src/test.cpp 
+Execute       ap_part_info -name xc7z020-clg400-2 -data info 
+INFO-FLOW: Running: GCC PP
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "E:/Xilinx/Vivado/2019.2/msys" -hls  -fno-exceptions  -D__llvm__  -E "test_conv/src/test.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "E:/Xilinx/Vivado/2019.2/common/technology/autopilot" -I "E:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/test.pp.0.cpp" 
+INFO-FLOW: exec E:/Xilinx/Vivado/2019.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain E:/Xilinx/Vivado/2019.2/msys -hls -fno-exceptions -D__llvm__ -E test_conv/src/test.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I E:/Xilinx/Vivado/2019.2/common/technology/autopilot -I E:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/test.pp.0.cpp
+Command       clang done; 1.176 sec.
+Execute       tidy_31 xilinx-xfmat-array-geometry D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/test.pp.0.cpp std=gnu++98 
+INFO-FLOW: exec E:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/test.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.637 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang -syntaxcheck -src D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/test.pp.0.cpp  -fno-limit-debug-info -gcc-toolchain "E:/Xilinx/Vivado/2019.2/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "E:/Xilinx/Vivado/2019.2/common/technology/autopilot" -I "E:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/test.pp.0.cpp"  -o "D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/useless.bc"  
+INFO-FLOW: exec E:/Xilinx/Vivado/2019.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain E:/Xilinx/Vivado/2019.2/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I E:/Xilinx/Vivado/2019.2/common/technology/autopilot -I E:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/test.pp.0.cpp -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/useless.bc
+Command       clang done; 1.384 sec.
+INFO-FLOW: Done: GCC PP time: 3.2 seconds per iteration
+Execute       source E:/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute       source E:/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute         source E:/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/try/try.tcl 
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/test.pp.0.cpp std=gnu++98 -directive=D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec E:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/test.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.589 sec.
+INFO-FLOW: Running: tidy-3.1 CDT preprocess
+Execute       tidy_31 xilinx-directive2pragma D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/test.pp.0.cpp std=gnu++98 -directive=D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec E:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/all.directive.json -quiet -fix-errors D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/test.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.586 sec.
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr E:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/xilinx-dataflow-lawyer.test.pp.0.cpp.diag.yml D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/test.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/xilinx-dataflow-lawyer.test.pp.0.cpp.out.log 2> D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/xilinx-dataflow-lawyer.test.pp.0.cpp.err.log 
+Command       ap_eval done; 0.56 sec.
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/test.pp.0.cpp std=gnu++98 
+Execute         ap_eval exec -ignorestderr E:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/tidy-3.1.test.pp.0.cpp.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/test.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/tidy-3.1.test.pp.0.cpp.out.log 2> D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/tidy-3.1.test.pp.0.cpp.err.log 
+Command         ap_eval done; 1.146 sec.
+Execute         source E:/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
+Execute           source E:/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/cmdline/cmdline.tcl 
+Execute         ap_eval exec -ignorestderr E:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/test.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/xilinx-legacy-rewriter.test.pp.0.cpp.out.log 2> D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/xilinx-legacy-rewriter.test.pp.0.cpp.err.log 
+Command         ap_eval done; 0.391 sec.
+Command       tidy_31 done; 1.571 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 2.7 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/test.pragma.1.cpp std=gnu++98 
+INFO-FLOW: exec E:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/test.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 1.223 sec.
+Execute       ap_part_info -name xc7z020-clg400-2 -data info 
+INFO-FLOW: Processing labels
+Execute       clang -src D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/test.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain E:/Xilinx/Vivado/2019.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/test.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "E:/Xilinx/Vivado/2019.2/common/technology/autopilot" -I "E:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/test.bc" 
+INFO-FLOW: exec E:/Xilinx/Vivado/2019.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain E:/Xilinx/Vivado/2019.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/test.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I E:/Xilinx/Vivado/2019.2/common/technology/autopilot -I E:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/test.bc
+Command       clang done; 1.414 sec.
+INFO-FLOW: Linking Debug ...
+Execute       llvm-ld D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/test.g.bc -hls-opt -except-internalize conv -LE:/Xilinx/Vivado/2019.2/win64/lib -lhlsm -lhlsmc++ -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/a.g 
+Command       llvm-ld done; 0.843 sec.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 198.656 ; gain = 106.215
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 198.656 ; gain = 106.215
+Execute       get_config_sdx -target 
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute         cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+Execute         transform -promote-dbg-pointer D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/a.pp.bc -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/a.pp.0.bc -f 
+Execute         llvm-ld D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/a.pp.0.bc -disable-opt -LE:/Xilinx/Vivado/2019.2/win64/lib -lfloatconversion -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/a.g.0 
+Command         llvm-ld done; 0.643 sec.
+INFO-FLOW: Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top conv -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/a.g.0.bc -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
+Command         transform done; 0.12 sec.
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 198.656 ; gain = 106.215
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce -check-dspbuiltin D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/a.g.1.bc -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/a.g.2.prechk.bc -f 
+INFO: [XFORM 203-602] Inlining function 'relu6' into 'store_output' (test_conv/src/test.cpp:62) automatically.
+INFO: [XFORM 203-602] Inlining function 'next_block' into 'conv' (test_conv/src/test.cpp:159) automatically.
+Command         transform done; 0.114 sec.
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute         transform -syn-check D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/a.g.2.prechk.bc -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
+WARNING: [SYNCHK 200-23] test_conv/src/test.cpp:62: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 198.656 ; gain = 106.215
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/a.g.1.bc to D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute         transform -hls -tmp D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -function-inline -complex-op-raise -inst-simplify -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/a.o.1.bc -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/a.o.1.tmp.bc -f 
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1.1.1.1' (test_conv/src/test.cpp:98) in function 'compute' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1.1.1' (test_conv/src/test.cpp:100) in function 'compute' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1.1.1.1' (test_conv/src/test.cpp:101) in function 'compute' completely with a factor of 3.
+INFO: [XFORM 203-101] Partitioning array 'fm_in_buff1.V' (test_conv/src/test.cpp:138) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'fm_in_buff2.V' (test_conv/src/test.cpp:139) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'wt_buff.V' (test_conv/src/test.cpp:142) in dimension 1 completely.
+WARNING: [XFORM 203-104] Completely partitioning array 'bias_buff.V' (test_conv/src/test.cpp:145) accessed through non-constant indices on dimension 1 (test_conv/src/test.cpp:149:2), which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead.
+INFO: [XFORM 203-101] Partitioning array 'bias_buff.V' (test_conv/src/test.cpp:145) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'wt_buff.V' (test_conv/src/test.cpp:142) in dimension 2 completely.
+INFO: [XFORM 203-602] Inlining function 'relu6' into 'store_output' (test_conv/src/test.cpp:62) automatically.
+INFO: [XFORM 203-602] Inlining function 'next_block' into 'conv' (test_conv/src/test.cpp:159) automatically.
+Command         transform done; 2.276 sec.
+INFO-FLOW: Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/a.o.1.tmp.bc -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (test_conv/src/test.cpp:62:6) to (test_conv/src/test.cpp:60:21) in function 'store_output'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (test_conv/src/test.cpp:98:27) to (test_conv/src/test.cpp:98:22) in function 'compute'... converting 337 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'store_output' (test_conv/src/test.cpp:53)...3 expression(s) balanced.
+Command         transform done; 1.805 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:17 . Memory (MB): peak = 216.793 ; gain = 124.352
+INFO-FLOW: Building ssdm...
+Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -ptrLegalization -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/a.o.2.bc -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (test_conv/src/test.cpp:27:13) in function 'load_input'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1.1' (test_conv/src/test.cpp:97:15) in function 'compute'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (test_conv/src/test.cpp:96:15) in function 'compute'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (test_conv/src/test.cpp:95:14) in function 'compute'.
+WARNING: [HLS 200-466] Port 'bias.V'() has different latency/depth on the same m_axi bundle:'W'
+INFO: [HLS 200-444] Inferring multiple bus burst read of a total cumulative length 64 on port 'W' (test_conv/src/test.cpp:149:2). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst write of a total cumulative length 28 on port 'out.V' (test_conv/src/test.cpp:64:5). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst read of a total cumulative length 2352 on port 'weight.V' (test_conv/src/test.cpp:49:5). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst read of a total cumulative length 61 on port 'in1.V' (test_conv/src/test.cpp:30:55). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst read of a total cumulative length 61 on port 'in2.V' (test_conv/src/test.cpp:31:66). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst read of a total cumulative length 61 on port 'in3.V' (test_conv/src/test.cpp:32:68). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-472] Inferring partial write operation for 'fm_out_buff.V' (test_conv/src/test.cpp:107:8)
+INFO: [HLS 200-472] Inferring partial write operation for 'wt_buff.V' (test_conv/src/test.cpp:49:5)
+INFO: [HLS 200-472] Inferring partial write operation for 'fm_in_buff[0].V' (test_conv/src/test.cpp:34:5)
+INFO: [HLS 200-472] Inferring partial write operation for 'fm_in_buff[1].V' (test_conv/src/test.cpp:35:5)
+INFO: [HLS 200-472] Inferring partial write operation for 'fm_in_buff[2].V' (test_conv/src/test.cpp:36:5)
+INFO: [HLS 200-472] Inferring partial write operation for 'fm_in_buff[0].V' (test_conv/src/test.cpp:39:5)
+INFO: [HLS 200-472] Inferring partial write operation for 'fm_in_buff[1].V' (test_conv/src/test.cpp:40:5)
+INFO: [HLS 200-472] Inferring partial write operation for 'fm_in_buff[2].V' (test_conv/src/test.cpp:41:5)
+Command         transform done; 5.412 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:09 ; elapsed = 00:00:23 . Memory (MB): peak = 269.859 ; gain = 177.418
+INFO-FLOW: Finish building internal data model.
+Command       opt_and_import_c done; 10.462 sec.
+Command     elaborate done; 20.731 sec.
+Execute     autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'conv' ...
+Execute       ap_set_top_model conv 
+Execute       get_model_list conv -filter all-wo-channel -topdown 
+Execute       preproc_iomode -model conv 
+Execute       preproc_iomode -model compute_output 
+Execute       preproc_iomode -model store_output 
+Execute       preproc_iomode -model compute4 
+Execute       preproc_iomode -model load_weight 
+Execute       preproc_iomode -model load_input 
+Execute       get_model_list conv -filter all-wo-channel 
+INFO-FLOW: Model list for configure: load_input load_weight compute4 store_output compute_output conv
+INFO-FLOW: Configuring Module : load_input ...
+Execute       set_default_model load_input 
+Execute       apply_spec_resource_limit load_input 
+INFO-FLOW: Configuring Module : load_weight ...
+Execute       set_default_model load_weight 
+Execute       apply_spec_resource_limit load_weight 
+INFO-FLOW: Configuring Module : compute4 ...
+Execute       set_default_model compute4 
+Execute       apply_spec_resource_limit compute4 
+INFO-FLOW: Configuring Module : store_output ...
+Execute       set_default_model store_output 
+Execute       apply_spec_resource_limit store_output 
+INFO-FLOW: Configuring Module : compute_output ...
+Execute       set_default_model compute_output 
+Execute       apply_spec_resource_limit compute_output 
+INFO-FLOW: Configuring Module : conv ...
+Execute       set_default_model conv 
+Execute       apply_spec_resource_limit conv 
+INFO-FLOW: Model list for preprocess: load_input load_weight compute4 store_output compute_output conv
+INFO-FLOW: Preprocessing Module: load_input ...
+Execute       set_default_model load_input 
+Execute       cdfg_preprocess -model load_input 
+Execute       rtl_gen_preprocess load_input 
+INFO-FLOW: Preprocessing Module: load_weight ...
+Execute       set_default_model load_weight 
+Execute       cdfg_preprocess -model load_weight 
+Execute       rtl_gen_preprocess load_weight 
+INFO-FLOW: Preprocessing Module: compute4 ...
+Execute       set_default_model compute4 
+Execute       cdfg_preprocess -model compute4 
+Execute       rtl_gen_preprocess compute4 
+INFO-FLOW: Preprocessing Module: store_output ...
+Execute       set_default_model store_output 
+Execute       cdfg_preprocess -model store_output 
+Execute       rtl_gen_preprocess store_output 
+INFO-FLOW: Preprocessing Module: compute_output ...
+Execute       set_default_model compute_output 
+Execute       cdfg_preprocess -model compute_output 
+Execute       rtl_gen_preprocess compute_output 
+INFO-FLOW: Preprocessing Module: conv ...
+Execute       set_default_model conv 
+Execute       cdfg_preprocess -model conv 
+Execute       rtl_gen_preprocess conv 
+WARNING: [SYN 201-107] Renaming port name 'conv/OUT' to 'conv/OUT_r' to avoid the conflict with HDL keywords or other object names.
+INFO-FLOW: Model list for synthesis: load_input load_weight compute4 store_output compute_output conv
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'load_input' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model load_input 
+Execute       schedule -model load_input 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 25.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.102 sec.
+INFO: [HLS 200-111]  Elapsed time: 22.849 seconds; current allocated memory: 210.146 MB.
+Execute       syn_report -verbosereport -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/load_input.verbose.sched.rpt 
+Execute       db_write -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/load_input.sched.adb -f 
+INFO-FLOW: Finish scheduling load_input.
+Execute       set_default_model load_input 
+Execute       bind -model load_input 
+BIND OPTION: model=load_input
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.139 seconds; current allocated memory: 210.603 MB.
+Execute       syn_report -verbosereport -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/load_input.verbose.bind.rpt 
+Execute       db_write -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/load_input.bind.adb -f 
+INFO-FLOW: Finish binding load_input.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'load_weight' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model load_weight 
+Execute       schedule -model load_weight 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'memcpy.wt_buff.V.gep.weight.V'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.144 seconds; current allocated memory: 210.781 MB.
+Execute       syn_report -verbosereport -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/load_weight.verbose.sched.rpt 
+Execute       db_write -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/load_weight.sched.adb -f 
+INFO-FLOW: Finish scheduling load_weight.
+Execute       set_default_model load_weight 
+Execute       bind -model load_weight 
+BIND OPTION: model=load_weight
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.056 seconds; current allocated memory: 210.937 MB.
+Execute       syn_report -verbosereport -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/load_weight.verbose.bind.rpt 
+Execute       db_write -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/load_weight.bind.adb -f 
+INFO-FLOW: Finish binding load_weight.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'compute4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model compute4 
+Execute       schedule -model compute4 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('wt_buff_V_load_6', test_conv/src/test.cpp:106) on array 'wt_buff_V' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'wt_buff_V'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 24, Depth = 36.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 2.623 sec.
+INFO: [HLS 200-111]  Elapsed time: 2.679 seconds; current allocated memory: 216.568 MB.
+Execute       syn_report -verbosereport -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/compute4.verbose.sched.rpt 
+Command       syn_report done; 0.516 sec.
+Execute       db_write -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/compute4.sched.adb -f 
+Command       db_write done; 0.451 sec.
+INFO-FLOW: Finish scheduling compute4.
+Execute       set_default_model compute4 
+Execute       bind -model compute4 
+BIND OPTION: model=compute4
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.635 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.64 seconds; current allocated memory: 225.655 MB.
+Execute       syn_report -verbosereport -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/compute4.verbose.bind.rpt 
+Command       syn_report done; 1.29 sec.
+Execute       db_write -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/compute4.bind.adb -f 
+Command       db_write done; 0.503 sec.
+INFO-FLOW: Finish binding compute4.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'store_output' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model store_output 
+Execute       schedule -model store_output 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.866 seconds; current allocated memory: 227.536 MB.
+Execute       syn_report -verbosereport -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/store_output.verbose.sched.rpt 
+Execute       db_write -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/store_output.sched.adb -f 
+INFO-FLOW: Finish scheduling store_output.
+Execute       set_default_model store_output 
+Execute       bind -model store_output 
+BIND OPTION: model=store_output
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.104 seconds; current allocated memory: 227.917 MB.
+Execute       syn_report -verbosereport -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/store_output.verbose.bind.rpt 
+Execute       db_write -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/store_output.bind.adb -f 
+INFO-FLOW: Finish binding store_output.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'compute_output' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model compute_output 
+Execute       schedule -model compute_output 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.127 seconds; current allocated memory: 228.160 MB.
+Execute       syn_report -verbosereport -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/compute_output.verbose.sched.rpt 
+Execute       db_write -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/compute_output.sched.adb -f 
+INFO-FLOW: Finish scheduling compute_output.
+Execute       set_default_model compute_output 
+Execute       bind -model compute_output 
+BIND OPTION: model=compute_output
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.92 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.985 seconds; current allocated memory: 230.432 MB.
+Execute       syn_report -verbosereport -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/compute_output.verbose.bind.rpt 
+Command       syn_report done; 0.705 sec.
+Execute       db_write -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/compute_output.bind.adb -f 
+INFO-FLOW: Finish binding compute_output.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model conv 
+Execute       schedule -model conv 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'memcpy.bias_buff.V.addr.bias.V'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.857 seconds; current allocated memory: 232.720 MB.
+Execute       syn_report -verbosereport -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/conv.verbose.sched.rpt 
+Execute       db_write -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/conv.sched.adb -f 
+INFO-FLOW: Finish scheduling conv.
+Execute       set_default_model conv 
+Execute       bind -model conv 
+BIND OPTION: model=conv
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.54 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.712 seconds; current allocated memory: 235.392 MB.
+Execute       syn_report -verbosereport -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/conv.verbose.bind.rpt 
+Command       syn_report done; 0.797 sec.
+Execute       db_write -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/conv.bind.adb -f 
+INFO-FLOW: Finish binding conv.
+Execute       get_model_list conv -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess load_input 
+Execute       rtl_gen_preprocess load_weight 
+Execute       rtl_gen_preprocess compute4 
+Execute       rtl_gen_preprocess store_output 
+Execute       rtl_gen_preprocess compute_output 
+Execute       rtl_gen_preprocess conv 
+INFO-FLOW: Model list for RTL generation: load_input load_weight compute4 store_output compute_output conv
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'load_input' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model load_input -vendor xilinx -mg_file D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/load_input.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'conv_urem_12ns_7ns_12_16_1' to 'conv_urem_12ns_7nbkb' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'conv_urem_12ns_7nbkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'load_input'.
+INFO: [HLS 200-111]  Elapsed time: 0.996 seconds; current allocated memory: 238.138 MB.
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/conv.rtl_wrap.cfg.tcl 
+Execute       gen_rtl load_input -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/syn/systemc/load_input -synmodules load_input load_weight compute4 store_output compute_output conv 
+Execute       gen_rtl load_input -style xilinx -f -lang vhdl -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/syn/vhdl/load_input 
+Execute       gen_rtl load_input -style xilinx -f -lang vlog -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/syn/verilog/load_input 
+Execute       syn_report -csynth -model load_input -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/syn/report/load_input_csynth.rpt 
+Execute       syn_report -rtlxml -model load_input -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/syn/report/load_input_csynth.xml 
+Execute       syn_report -verbosereport -model load_input -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/load_input.verbose.rpt 
+Execute       db_write -model load_input -f -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/load_input.adb 
+Execute       gen_tb_info load_input -p D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/load_input 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'load_weight' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model load_weight -vendor xilinx -mg_file D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/load_weight.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'conv_mac_muladd_7ns_9ns_31ns_32_1_1' to 'conv_mac_muladd_7cud' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'conv_mac_muladd_7cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'load_weight'.
+INFO: [HLS 200-111]  Elapsed time: 0.477 seconds; current allocated memory: 238.838 MB.
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/conv.rtl_wrap.cfg.tcl 
+Execute       gen_rtl load_weight -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/syn/systemc/load_weight -synmodules load_input load_weight compute4 store_output compute_output conv 
+Execute       gen_rtl load_weight -style xilinx -f -lang vhdl -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/syn/vhdl/load_weight 
+Execute       gen_rtl load_weight -style xilinx -f -lang vlog -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/syn/verilog/load_weight 
+Execute       syn_report -csynth -model load_weight -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/syn/report/load_weight_csynth.rpt 
+Execute       syn_report -rtlxml -model load_weight -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/syn/report/load_weight_csynth.xml 
+Execute       syn_report -verbosereport -model load_weight -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/load_weight.verbose.rpt 
+Execute       db_write -model load_weight -f -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/load_weight.adb 
+Execute       gen_tb_info load_weight -p D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/load_weight 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'compute4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model compute4 -vendor xilinx -mg_file D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/compute4.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'conv_mac_muladd_7ns_6ns_6ns_12_1_1' to 'conv_mac_muladd_7dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv_mul_mul_16s_16s_32_1_1' to 'conv_mul_mul_16s_eOg' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'conv_mac_muladd_7dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'conv_mul_mul_16s_eOg': 48 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'conv_mux_646_16_1_1': 16 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'compute4'.
+Command       create_rtl_model done; 0.517 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.667 seconds; current allocated memory: 257.171 MB.
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/conv.rtl_wrap.cfg.tcl 
+Execute       gen_rtl compute4 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/syn/systemc/compute4 -synmodules load_input load_weight compute4 store_output compute_output conv 
+Execute       gen_rtl compute4 -style xilinx -f -lang vhdl -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/syn/vhdl/compute4 
+Execute       gen_rtl compute4 -style xilinx -f -lang vlog -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/syn/verilog/compute4 
+Execute       syn_report -csynth -model compute4 -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/syn/report/compute4_csynth.rpt 
+Command       syn_report done; 0.53 sec.
+Execute       syn_report -rtlxml -model compute4 -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/syn/report/compute4_csynth.xml 
+Command       syn_report done; 0.251 sec.
+Execute       syn_report -verbosereport -model compute4 -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/compute4.verbose.rpt 
+Command       syn_report done; 1.529 sec.
+Execute       db_write -model compute4 -f -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/compute4.adb 
+Command       db_write done; 1.253 sec.
+Execute       gen_tb_info compute4 -p D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/compute4 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'store_output' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model store_output -vendor xilinx -mg_file D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/store_output.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'conv_mul_mul_5ns_15ns_20_1_1' to 'conv_mul_mul_5ns_fYi' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'conv_mul_mul_5ns_fYi': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'store_output'.
+INFO: [HLS 200-111]  Elapsed time: 8.303 seconds; current allocated memory: 264.727 MB.
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/conv.rtl_wrap.cfg.tcl 
+Execute       gen_rtl store_output -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/syn/systemc/store_output -synmodules load_input load_weight compute4 store_output compute_output conv 
+Execute       gen_rtl store_output -style xilinx -f -lang vhdl -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/syn/vhdl/store_output 
+Execute       gen_rtl store_output -style xilinx -f -lang vlog -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/syn/verilog/store_output 
+Execute       syn_report -csynth -model store_output -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/syn/report/store_output_csynth.rpt 
+Execute       syn_report -rtlxml -model store_output -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/syn/report/store_output_csynth.xml 
+Execute       syn_report -verbosereport -model store_output -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/store_output.verbose.rpt 
+Execute       db_write -model store_output -f -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/store_output.adb 
+Command       db_write done; 0.19 sec.
+Execute       gen_tb_info store_output -p D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/store_output 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'compute_output' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model compute_output -vendor xilinx -mg_file D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/compute_output.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'compute_output_wt_buff_V' to 'compute_output_wtg8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'compute_output_fm_out_buff_V' to 'compute_output_fmhbi' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'compute_output'.
+INFO: [HLS 200-111]  Elapsed time: 0.632 seconds; current allocated memory: 266.223 MB.
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/conv.rtl_wrap.cfg.tcl 
+Execute       gen_rtl compute_output -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/syn/systemc/compute_output -synmodules load_input load_weight compute4 store_output compute_output conv 
+Execute       gen_rtl compute_output -style xilinx -f -lang vhdl -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/syn/vhdl/compute_output 
+Execute       gen_rtl compute_output -style xilinx -f -lang vlog -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/syn/verilog/compute_output 
+Execute       syn_report -csynth -model compute_output -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/syn/report/compute_output_csynth.rpt 
+Execute       syn_report -rtlxml -model compute_output -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/syn/report/compute_output_csynth.xml 
+Execute       syn_report -verbosereport -model compute_output -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/compute_output.verbose.rpt 
+Command       syn_report done; 0.717 sec.
+Execute       db_write -model compute_output -f -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/compute_output.adb 
+Command       db_write done; 0.186 sec.
+Execute       gen_tb_info compute_output -p D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/compute_output 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model conv -vendor xilinx -mg_file D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/conv.compgen.tcl 
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv/IN1' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv/IN2' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv/IN3' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv/W' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv/OUT_r' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv/in1_V' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv/in2_V' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv/in3_V' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv/weight_V' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv/bias_V' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv/out_V' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'conv' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'return', 'in1_V', 'in3_V', 'weight_V', 'bias_V' and 'out_V' to AXI-Lite port CTRL.
+INFO: [SYN 201-210] Renamed object name 'conv_fm_in_buff1_0_V' to 'conv_fm_in_buff1_ibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv_fm_in_buff1_1_V' to 'conv_fm_in_buff1_jbC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv_fm_in_buff1_2_V' to 'conv_fm_in_buff1_kbM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv_fm_in_buff2_0_V' to 'conv_fm_in_buff2_lbW' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv_fm_in_buff2_1_V' to 'conv_fm_in_buff2_mb6' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv_fm_in_buff2_2_V' to 'conv_fm_in_buff2_ncg' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv'.
+Command       create_rtl_model done; 0.302 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.342 seconds; current allocated memory: 271.483 MB.
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/conv.rtl_wrap.cfg.tcl 
+Execute       gen_rtl conv -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/syn/systemc/conv -synmodules load_input load_weight compute4 store_output compute_output conv 
+Execute       gen_rtl conv -istop -style xilinx -f -lang vhdl -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/syn/vhdl/conv 
+Execute       gen_rtl conv -istop -style xilinx -f -lang vlog -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/syn/verilog/conv 
+Execute       syn_report -csynth -model conv -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/syn/report/conv_csynth.rpt 
+Execute       syn_report -rtlxml -model conv -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/syn/report/conv_csynth.xml 
+Execute       syn_report -verbosereport -model conv -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/conv.verbose.rpt 
+Command       syn_report done; 0.812 sec.
+Execute       db_write -model conv -f -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/conv.adb 
+Command       db_write done; 0.272 sec.
+Execute       gen_tb_info conv -p D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/conv 
+Execute       export_constraint_db -f -tool general -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/conv.constraint.tcl 
+Execute       syn_report -designview -model conv -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/conv.design.xml 
+Command       syn_report done; 0.587 sec.
+Execute       get_config_rtl -disable_wave_debug 
+Execute       syn_report -wcfg -model conv -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/conv_dataflow_ana.wcfg 
+Execute       syn_report -protoinst -model conv -o D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/conv.protoinst 
+Execute       get_config_debug -directory 
+Execute       sc_get_clocks conv 
+Execute       get_config_export -vivado_clock 
+Execute       sc_get_portdomain conv 
+INFO-FLOW: Model list for RTL component generation: load_input load_weight compute4 store_output compute_output conv
+INFO-FLOW: Handling components in module [load_input] ... 
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/load_input.compgen.tcl 
+INFO-FLOW: Found component conv_urem_12ns_7nbkb.
+INFO-FLOW: Append model conv_urem_12ns_7nbkb
+INFO-FLOW: Handling components in module [load_weight] ... 
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/load_weight.compgen.tcl 
+INFO-FLOW: Found component conv_mac_muladd_7cud.
+INFO-FLOW: Append model conv_mac_muladd_7cud
+INFO-FLOW: Handling components in module [compute4] ... 
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/compute4.compgen.tcl 
+INFO-FLOW: Found component conv_mux_646_16_1_1.
+INFO-FLOW: Append model conv_mux_646_16_1_1
+INFO-FLOW: Found component conv_mac_muladd_7dEe.
+INFO-FLOW: Append model conv_mac_muladd_7dEe
+INFO-FLOW: Found component conv_mul_mul_16s_eOg.
+INFO-FLOW: Append model conv_mul_mul_16s_eOg
+INFO-FLOW: Handling components in module [store_output] ... 
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/store_output.compgen.tcl 
+INFO-FLOW: Found component conv_mul_mul_5ns_fYi.
+INFO-FLOW: Append model conv_mul_mul_5ns_fYi
+INFO-FLOW: Handling components in module [compute_output] ... 
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/compute_output.compgen.tcl 
+INFO-FLOW: Found component compute_output_wtg8j.
+INFO-FLOW: Append model compute_output_wtg8j
+INFO-FLOW: Found component compute_output_fmhbi.
+INFO-FLOW: Append model compute_output_fmhbi
+INFO-FLOW: Handling components in module [conv] ... 
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/conv.compgen.tcl 
+INFO-FLOW: Found component conv_fm_in_buff1_ibs.
+INFO-FLOW: Append model conv_fm_in_buff1_ibs
+INFO-FLOW: Found component conv_CTRL_s_axi.
+INFO-FLOW: Append model conv_CTRL_s_axi
+INFO-FLOW: Found component conv_IN1_m_axi.
+INFO-FLOW: Append model conv_IN1_m_axi
+INFO-FLOW: Found component conv_IN2_m_axi.
+INFO-FLOW: Append model conv_IN2_m_axi
+INFO-FLOW: Found component conv_IN3_m_axi.
+INFO-FLOW: Append model conv_IN3_m_axi
+INFO-FLOW: Found component conv_W_m_axi.
+INFO-FLOW: Append model conv_W_m_axi
+INFO-FLOW: Found component conv_OUT_r_m_axi.
+INFO-FLOW: Append model conv_OUT_r_m_axi
+INFO-FLOW: Append model load_input
+INFO-FLOW: Append model load_weight
+INFO-FLOW: Append model compute4
+INFO-FLOW: Append model store_output
+INFO-FLOW: Append model compute_output
+INFO-FLOW: Append model conv
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: conv_urem_12ns_7nbkb conv_mac_muladd_7cud conv_mux_646_16_1_1 conv_mac_muladd_7dEe conv_mul_mul_16s_eOg conv_mul_mul_5ns_fYi compute_output_wtg8j compute_output_fmhbi conv_fm_in_buff1_ibs conv_CTRL_s_axi conv_IN1_m_axi conv_IN2_m_axi conv_IN3_m_axi conv_W_m_axi conv_OUT_r_m_axi load_input load_weight compute4 store_output compute_output conv
+INFO-FLOW: To file: write model conv_urem_12ns_7nbkb
+INFO-FLOW: To file: write model conv_mac_muladd_7cud
+INFO-FLOW: To file: write model conv_mux_646_16_1_1
+INFO-FLOW: To file: write model conv_mac_muladd_7dEe
+INFO-FLOW: To file: write model conv_mul_mul_16s_eOg
+INFO-FLOW: To file: write model conv_mul_mul_5ns_fYi
+INFO-FLOW: To file: write model compute_output_wtg8j
+INFO-FLOW: To file: write model compute_output_fmhbi
+INFO-FLOW: To file: write model conv_fm_in_buff1_ibs
+INFO-FLOW: To file: write model conv_CTRL_s_axi
+INFO-FLOW: To file: write model conv_IN1_m_axi
+INFO-FLOW: To file: write model conv_IN2_m_axi
+INFO-FLOW: To file: write model conv_IN3_m_axi
+INFO-FLOW: To file: write model conv_W_m_axi
+INFO-FLOW: To file: write model conv_OUT_r_m_axi
+INFO-FLOW: To file: write model load_input
+INFO-FLOW: To file: write model load_weight
+INFO-FLOW: To file: write model compute4
+INFO-FLOW: To file: write model store_output
+INFO-FLOW: To file: write model compute_output
+INFO-FLOW: To file: write model conv
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+Execute       syn_report -model conv -printsummary 
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 114.29 MHz
+INFO-FLOW: DBG:CMD: auto_generate_csynth_design
+INFO-FLOW: DBG:CMD:     auto_generate --sim-model -phase csynth_design -d D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/global.setting.tcl
+Execute       source E:/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/common.gen 
+Execute         source E:/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source E:/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/op.gen 
+Execute       source E:/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source E:/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/interface.gen 
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/global.setting.tcl 
+Execute       source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq.gen 
+Execute         source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
+Execute           source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
+Execute       source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute         source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=1 export=0 expOnly=0 dstVlogDir=syn/verilog
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xc7z020-clg400-2 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-2 -data info -quiet 
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/load_input.compgen.tcl 
+Execute         ap_part_info -name xc7z020-clg400-2 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-2 -data info -quiet 
+INFO: [RTMG 210-282] Generating pipelined core: 'conv_urem_12ns_7nbkb_div'
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/load_weight.compgen.tcl 
+Execute         ap_part_info -name xc7z020-clg400-2 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-2 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-2 -data info 
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/compute4.compgen.tcl 
+Execute         ap_part_info -name xc7z020-clg400-2 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-2 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-2 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-2 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-2 -data info 
+Execute         ap_part_info -name xc7z020-clg400-2 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-2 -data info -quiet 
+Command       ap_source done; 0.117 sec.
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/store_output.compgen.tcl 
+Execute         ap_part_info -name xc7z020-clg400-2 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-2 -data info -quiet 
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/compute_output.compgen.tcl 
+INFO: [RTMG 210-278] Implementing memory 'compute_output_wtg8j_ram (RAM)' using block RAMs.
+Execute         ap_part_info -name xc7z020-clg400-2 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-2 -data info -quiet 
+INFO: [RTMG 210-278] Implementing memory 'compute_output_fmhbi_ram (RAM)' using block RAMs.
+Execute         ap_part_info -name xc7z020-clg400-2 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-2 -data info -quiet 
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/conv.compgen.tcl 
+INFO: [RTMG 210-278] Implementing memory 'conv_fm_in_buff1_ibs_ram (RAM)' using block RAMs.
+Execute         ap_part_info -name xc7z020-clg400-2 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-2 -data info -quiet 
+Execute         source ./CTRL.slave.tcl 
+Execute         is_m_axi_addr64 
+Execute         ap_part_info -name xc7z020-clg400-2 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-2 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-2 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-2 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-2 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-2 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-2 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-2 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-2 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-2 -data info -quiet 
+Command       ap_source done; 0.304 sec.
+INFO-FLOW: DBG:CMD:     auto_generate -export -impltomg_flag -rtl both -tool Vivado -pcore_version 1.00.a -phase csynth_design -d D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/global.setting.tcl
+Execute       source E:/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/common.gen 
+Execute         source E:/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source E:/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/op.gen 
+Execute       source E:/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source E:/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/interface.gen 
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/global.setting.tcl 
+Execute       source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq.gen 
+Execute         source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
+Execute           source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
+Execute       source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute         source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=conv xml_exists=0
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/conv.rtl_wrap.cfg.tcl 
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/conv.rtl_wrap.cfg.tcl 
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/conv.rtl_wrap.cfg.tcl 
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/conv.tbgen.tcl 
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/conv.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       export_impl_rtl
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.verilog
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/load_input.compgen.tcl 
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/load_weight.compgen.tcl 
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/compute4.compgen.tcl 
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/store_output.compgen.tcl 
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/compute_output.compgen.tcl 
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/conv.compgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/load_input.compgen.tcl 
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/load_weight.compgen.tcl 
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/compute4.compgen.tcl 
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/store_output.compgen.tcl 
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/compute_output.compgen.tcl 
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/conv.compgen.tcl 
+Execute         ap_part_info -name xc7z020-clg400-2 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-2 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-2 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-2 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-2 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-2 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-2 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-2 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-2 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-2 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-2 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-2 -data info -quiet 
+Execute       ap_part_info -name xc7z020-clg400-2 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-2 -data info -quiet 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/load_input.compgen.tcl 
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/load_weight.compgen.tcl 
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/compute4.compgen.tcl 
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/store_output.compgen.tcl 
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/compute_output.compgen.tcl 
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/conv.compgen.tcl 
+Execute       ap_part_info -name xc7z020-clg400-2 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-2 -data info -quiet 
+Execute       ap_part_info -name xc7z020-clg400-2 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-2 -data info -quiet 
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xc7z020-clg400-2 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-2 -data info -quiet 
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/conv.constraint.tcl 
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/conv.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=0
+INFO-FLOW: DBG:CMD: Skipping loadAnalyze_DB, #g_database=11
+INFO-FLOW: DBG:CMD:       generate_json is_phase_csynth=1 g_has_adaptors=false generate_bd_files=0 #modelList=21 #gSsdmPorts=0
+Execute       source E:/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/fileutil/fileutil.tcl 
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/global.setting.tcl 
+Execute       get_config_export -xo 
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/conv.tbgen.tcl 
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/conv.compgen.dataonly.tcl 
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/conv.compgen.dataonly.tcl 
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/conv.tbgen.tcl 
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/conv.tbgen.tcl 
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/conv.tbgen.tcl 
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/conv.tbgen.tcl 
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/conv.tbgen.tcl 
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/global.setting.tcl 
+Execute       get_config_sdx -target 
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/conv.rtl_wrap.cfg.tcl 
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/conv.compgen.dataonly.tcl 
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xc7z020-clg400-2 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-2 -data info -quiet 
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/conv.constraint.tcl 
+Execute       sc_get_clocks conv 
+Execute       ap_part_info -name xc7z020-clg400-2 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-2 -data info -quiet 
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/global.setting.tcl 
+Execute       get_config_debug -directory 
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/load_input.tbgen.tcl 
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/load_weight.tbgen.tcl 
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/compute4.tbgen.tcl 
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/store_output.tbgen.tcl 
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/compute_output.tbgen.tcl 
+Execute       source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/conv.tbgen.tcl 
+Execute       get_config_sdx -target 
+Execute       get_config_sdx -profile 
+Execute       get_config_rtl -kernel_profile 
+Execute       get_config_rtl -stall_sig_gen 
+Execute       get_config_rtl -profile 
+INFO-FLOW: DBG:CMD: add_json_sdx_info kernel file does not exist, skipping opencl info: D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/kernel.internal.xml
+INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:23 ; elapsed = 00:00:50 . Memory (MB): peak = 401.242 ; gain = 308.801
+INFO: [VHDL 208-304] Generating VHDL RTL for conv.
+INFO: [VLOG 209-307] Generating Verilog RTL for conv.
+Command     autosyn done; 26.999 sec.
+Command   csynth_design done; 47.743 sec.
+Command ap_source done; 49.023 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1 opened at Tue Mar 19 16:50:18 +0800 2024
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib E:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq 
+Execute       source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.lib 
+Execute         source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.lib 
+Execute           source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.lib 
+Execute           source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.lib 
+Execute           source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.lib 
+Execute           source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.lib 
+Execute         source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.lib 
+Execute         source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.lib 
+Execute         source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.lib 
+Execute       source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute       source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq.gen 
+Execute       source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.gen 
+Execute         source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.gen 
+Execute         source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
+Execute         source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.117 sec.
+Command     ap_source done; 0.118 sec.
+Execute     set_part xc7z020clg400-2 
+Execute       ap_part_info -name xc7z020clg400-2 -data single -quiet 
+Command       ap_part_info done; 0.851 sec.
+Execute       ap_part_info -name xc7z020clg400-2 -data info 
+Execute       add_library xilinx/zynq/zynq:xc7z020:-clg400:-2 
+Execute         get_default_platform 
+Execute         ap_part_info -data single -name xc7z020-clg400-2 
+Execute         ap_part_info -name xc7z020-clg400-2 -data resources 
+Execute         ap_part_info -name xc7z020-clg400-2 -data info 
+Execute         ap_part_info -name xc7z020-clg400-2 -data info 
+Execute         config_chip_info -quiet -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP48E 220} {BRAM 280} {URAM 0} 
+Execute         ap_part_info -name xc7z020-clg400-2 -data info 
+Execute         config_chip_info -quiet -speed medium 
+Execute       add_library xilinx/zynq/zynq_fpv6 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib E:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6 
+Execute           source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.lib 
+Execute           source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute             source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute               source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute               source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute         source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute           source E:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-2'
+Execute       ap_part_info -name xc7z020-clg400-2 -data info 
+Execute       get_default_platform 
+Command     set_part done; 0.993 sec.
+Execute     ap_part_info -data single -name xc7z020clg400-2 
+Execute     ap_part_info -name xc7z020clg400-2 -data resources 
+Execute     ap_part_info -name xc7z020clg400-2 -data info 
+Execute     ap_part_info -name xc7z020clg400-2 -data info 
+Execute     config_chip_info -quiet -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP48E 220} {BRAM 280} {URAM 0} 
+Execute     ap_part_info -name xc7z020clg400-2 -data info 
+Execute     config_chip_info -quiet -speed medium 
+Command   open_solution done; 1.198 sec.
+Execute   csim_design -quiet 
+Execute     source D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/solution1/.autopilot/db/global.setting.tcl 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     is_encrypted D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/src/test_tb.cpp 
+Execute     is_xip D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/src/test_tb.cpp 
+Execute     is_encrypted D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/src/test.cpp 
+Execute     is_xip D:/workspace/grade2/HLS/my_cnn/test_c/test_conv/src/test.cpp 
+Execute     ap_part_info -name xc7z020clg400-2 -data info 
+Execute     source run_sim.tcl 
+Command     ap_source done; 174.939 sec.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; 184.497 sec.
+Command ap_source done; 185.702 sec.
+Execute cleanup_all 
